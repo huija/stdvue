@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>vue on</title>
+    <link rel="stylesheet" type="text/css" href="how-vue.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <button v-on:click="say('hi')">Say hi</button>
+      <button v-on:click="say('what')">Say what</button>
+      <!-- 访问原生事件对象 -->
+      <button v-on:click="warn('Form cannot be submitted yet.', $event)">
+        Submit
+      </button>
+    </div>
+  </body>
+
+  <script src="../vue.js" charset="utf-8"></script>
+  <script src="how-vue.js"></script>
+</html>

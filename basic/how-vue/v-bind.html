@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>vue bind</title>
+    <link rel="stylesheet" type="text/css" href="how-vue.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      {{ msg }}
+      <div
+        class="whole"
+        style="font-size: 30px"
+        v-bind:class="{active:isActive,green:!isActive}"
+      >
+        要想生活过得去...
+      </div>
+      <div>==================================</div>
+      <div
+        class="whole"
+        v-bind:style="{fontSize:fz}"
+        v-bind:class="[isActive?'active':'green']"
+      >
+        总得头上带点绿...
+      </div>
+    </div>
+  </body>
+
+  <script src="../vue.js" charset="utf-8"></script>
+  <script src="how-vue.js"></script>
+</html>

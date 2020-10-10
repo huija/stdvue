@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>hello vue</title>
+    <link rel="stylesheet" type="text/css" href="hello-vue.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      {{ msg }}
+      <div v-if="seen" v-html="rawHtml"></div>
+      <div v-bind:class="color">Neon lights</div>
+      <div v-on:click="clickOutter">
+        <!-- <div v-on:click="clickInner">click me</div> -->
+        <div v-on:click.stop="clickInner">click me</div>
+      </div>
+    </div>
+  </body>
+
+  <script src="../vue.js" charset="utf-8"></script>
+  <script src="hello-vue.js"></script>
+</html>

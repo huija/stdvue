@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>vue template</title>
+    <link rel="stylesheet" type="text/css" href="happy-vue.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <!-- 组件复用性 -->
+      <button-counter
+        name="Java"
+        v-on:count-changed="handleClick"
+      ></button-counter>
+      <button-counter
+        name="Go"
+        v-on:count-changed="handleClick"
+      ></button-counter>
+      <button-counter
+        name="Rust"
+        v-on:count-changed="handleClick"
+      ></button-counter>
+    </div>
+  </body>
+
+  <script src="../vue.js" charset="utf-8"></script>
+  <script src="happy-vue.js"></script>
+</html>

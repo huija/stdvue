@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>vue for</title>
+    <link rel="stylesheet" type="text/css" href="how-vue.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <ul>
+        <!-- key进行bind后续灵活性更强-->
+        <li v-for="(item, index) in items" :key="index">
+          {{index}} - {{item}}
+        </li>
+        <li>========================</li>
+        <!-- 除了支持array还支持object -->
+        <li v-for="(value,name, index) in object" :key="name">
+          {{index}} - {{name.toUpperCase()}} : {{value}}
+        </li>
+      </ul>
+    </div>
+  </body>
+
+  <script src="../vue.js" charset="utf-8"></script>
+  <script src="how-vue.js"></script>
+</html>
