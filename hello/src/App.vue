@@ -3,6 +3,8 @@
     <img alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
     <Test @clicked="son_click"></Test>
+    <!-- 路由出口,在这渲染最外层路由组件 -->
+    <router-view></router-view>
   </div>
 </template>
 

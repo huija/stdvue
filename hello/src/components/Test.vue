@@ -1,5 +1,5 @@
 <template>
-  <h2 class="red" @click="clickme">This is: {{ msg }}</h2>
+  <h2 class="red" @click="handleClick">This is: {{ msg }}</h2>
 </template>
 
 <script>
@@ -12,8 +12,8 @@ export default {
     },
   },
   methods: {
-    clickme: function() {
-      console.log('be clicked')
+    handleClick: function() {
+      console.log('Test be clicked')
       this.$emit('clicked', 'huija')
     },
   },
