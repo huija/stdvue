@@ -1,17 +1,22 @@
 <template>
-  <h2 class="red">This is: {{ msg }}</h2>
+  <h2 class="red" @click="clickme">This is: {{ msg }}</h2>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Test',
   props: {
     msg: {
-      tyep: String,
+      type: String,
       default: 'single file template test!',
     },
   },
-  methods: {},
+  methods: {
+    clickme: function() {
+      console.log('be clicked')
+      this.$emit('clicked', 'huija')
+    },
+  },
   data() {
     return {}
   },
